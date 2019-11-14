@@ -6,6 +6,12 @@
   <configure zcml:condition="installed AccessControl.security">
   <!-- -*- extra stuff goes here -*- -->
 
+    <permission
+        id="collective.contract_management.AddContracts"
+        title="collective.contract_management: Add Contracts"
+    />
+
+
 
   </configure>
 
