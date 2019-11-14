@@ -7,6 +7,12 @@
   <!-- -*- extra stuff goes here -*- -->
 
     <permission
+        id="collective.contract_management.AddContract"
+        title="collective.contract_management: Add Contract"
+    />
+
+
+    <permission
         id="collective.contract_management.AddContracts"
         title="collective.contract_management: Add Contracts"
     />
