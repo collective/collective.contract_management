@@ -22,10 +22,7 @@
   <property name="filter_content_types">True</property>
   <property name="allowed_content_types">
     <element value="Contract" />
-      <!--
-    <element value="Document" />
-    <element value="File" />
-  -->
+    <element value="Folder" />
   </property>
   <!-- Schema, class and security -->
   <property name="add_permission">collective.contract_management.AddContracts</property>
