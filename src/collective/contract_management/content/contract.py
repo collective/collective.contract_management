@@ -63,7 +63,6 @@ class IContract(model.Schema):
         required=False,
     )
 
-    # Make sure to import: plone.app.vocabularies as vocabs
     renewal_period = schema.Choice(
         title=_(
             u'Renewal period',

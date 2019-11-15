@@ -25,8 +25,11 @@ class RenewalPeriods(object):
         # Just an example list of content for our vocabulary,
         # this can be any static or dynamic data, a catalog result for example.
         items = [
-            VocabItem(u'sony-a7r-iii', _(u'Sony Aplha 7R III')),
-            VocabItem(u'canon-5d-iv', _(u'Canon 5D IV')),
+            VocabItem(u'3', _(u'3 months')),
+            VocabItem(u'6', _(u'6 months')),
+            VocabItem(u'12', _(u'12 months')),
+            VocabItem(u'24', _(u'24 months')),
+            VocabItem(u'36', _(u'36 months')),
         ]
 
         # Fix context if you are using the vocabulary in DataGridField.
