@@ -5,6 +5,12 @@
     <!-- -*- extra stuff goes here -*- -->
 
     <utility
+        component=".renewal_periods.RenewalPeriodsFactory"
+        name="collective.contract_management.RenewalPeriods"
+    />
+
+
+    <utility
         component=".reminder_types.ReminderTypesFactory"
         name="collective.contract_management.ReminderTypes"
     />
