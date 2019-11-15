@@ -17,7 +17,7 @@ class IContract(model.Schema):
     """ Marker interface and Dexterity Python Schema for Contract
     """
 
-    begin = schema.Date(
+    start = schema.Date(
        title=_(
            u'Contract begin',
        ),
@@ -40,14 +40,14 @@ class IContract(model.Schema):
     )
 
     notice_period = schema.Date(
-       title=_(
-           u'Notice period',
-       ),
-       description=_(
-           u'',
-       ),
-       # defaultFactory=get_default_notice_period,
-       required=False,
+        title=_(
+            u'Notice period',
+        ),
+        description=_(
+            u'',
+        ),
+        # defaultFactory=get_default_notice_period,
+        required=False,
     )
 
     # Make sure to import: plone.app.vocabularies as vocabs
