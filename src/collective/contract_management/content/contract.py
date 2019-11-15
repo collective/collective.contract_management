@@ -24,7 +24,7 @@ class IContract(model.Schema):
        description=_(
            u'',
        ),
-       # defaultFactory=get_default_contract_begin,
+       # defaultFactory=get_default_begin,
        required=True,
     )
 
@@ -35,7 +35,7 @@ class IContract(model.Schema):
        description=_(
            u'',
        ),
-       # defaultFactory=get_default_contract_end,
+       # defaultFactory=get_default_end,
        required=True,
     )
 
@@ -46,7 +46,7 @@ class IContract(model.Schema):
        description=_(
            u'',
        ),
-       # defaultFactory=get_default_contract_end,
+       # defaultFactory=get_default_notice_period,
        required=False,
     )
 
@@ -58,11 +58,22 @@ class IContract(model.Schema):
         description=_(
             u'Reminder, in days before Notice period.',
         ),
-        vocabulary=u'vocabs.PortalTypes',
-        default=u'',
-        # defaultFactory=get_default_reminder,
+        vocabulary=u'collective.contract_management.ReminderTypes',
+        default=u'60',
         required=False,
-        readonly=False,
+    )
+
+    # Make sure to import: plone.app.vocabularies as vocabs
+    renewal_period = schema.Choice(
+        title=_(
+            u'Renewal period',
+        ),
+        description=_(
+            u'Renewal time in month for the automatic renewal of the contract.',
+        ),
+        vocabulary=u'collective.contract_management.RenewalPeriods',
+        default=u'12',
+        required=False,
     )
 
 
