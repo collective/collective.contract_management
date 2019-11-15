@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="collective.contract_management">
+
+    <!-- -*- extra stuff goes here -*- -->
+
+    <utility
+        component=".reminder_types.ReminderTypesFactory"
+        name="collective.contract_management.ReminderTypes"
+    />
+
+
+</configure>
