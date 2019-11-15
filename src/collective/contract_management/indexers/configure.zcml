@@ -1,0 +1,10 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="collective.contract_management">
+
+  -*- extra stuff goes here -*-
+
+  <include package=".notice_period" />
+
+
+</configure>

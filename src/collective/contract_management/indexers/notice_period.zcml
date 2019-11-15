@@ -1,0 +1,9 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <adapter factory=".notice_period.dummy"
+    name="notice_period" />
+
+  <adapter factory=".notice_period.notice_period"
+    name="notice_period" />
+
+</configure
