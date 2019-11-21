@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
-from collective.contract_management.testing import (
-    COLLECTIVE_CONTRACT_MANAGEMENT_FUNCTIONAL_TESTING,
-)
-from collective.contract_management.testing import (
-    COLLECTIVE_CONTRACT_MANAGEMENT_INTEGRATION_TESTING,
-)
+from collective.contract_management.testing import COLLECTIVE_CONTRACT_MANAGEMENT_FUNCTIONAL_TESTING
+from collective.contract_management.testing import COLLECTIVE_CONTRACT_MANAGEMENT_INTEGRATION_TESTING
 from datetime import datetime
 from datetime import timedelta
 from plone import api
