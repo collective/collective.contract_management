@@ -5,7 +5,11 @@ Changelog
 1.0b2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Enable Notice period criteria for Collections
+  [MrTango]
+
+- Fix vocabularies
+  [MrTango]
 
 
 1.0b1 (2019-11-21)
