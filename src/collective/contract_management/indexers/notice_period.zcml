@@ -6,4 +6,4 @@
   <adapter factory=".notice_period.notice_period"
     name="notice_period" />
 
-</configure
+</configure>

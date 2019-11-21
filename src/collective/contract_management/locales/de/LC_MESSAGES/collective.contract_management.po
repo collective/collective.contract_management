@@ -1,100 +1,101 @@
 # --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# German translations for PACKAGE package.
+# Maik Derstappen <md@inqbus.de>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2019-11-21 10:41+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-11-21 11:32+0100\n"
+"Last-Translator: Maik Derstappen <md@inqbus.de>\n"
+"Language-Team: German\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.contract_management\n"
+"Language: de\n"
 
 #: collective/contract_management/vocabularies/renewal_periods.py:30
 msgid "12 months"
-msgstr ""
+msgstr "12 Monate"
 
 #: collective/contract_management/vocabularies/reminder_types.py:32
 msgid "120 days"
-msgstr ""
+msgstr "120 Tage"
 
 #: collective/contract_management/tests/test_vocab_reminder_types.py:31
 #: collective/contract_management/vocabularies/reminder_types.py:28
 msgid "14 days"
-msgstr ""
+msgstr "14 Tage"
 
 #: collective/contract_management/vocabularies/renewal_periods.py:31
 msgid "24 months"
-msgstr ""
+msgstr "24 Monate"
 
 #: collective/contract_management/tests/test_vocab_renewal_periods.py:31
 #: collective/contract_management/vocabularies/renewal_periods.py:28
 msgid "3 months"
-msgstr ""
+msgstr "3 Monate"
 
 #: collective/contract_management/vocabularies/reminder_types.py:29
 msgid "30 days"
-msgstr ""
+msgstr "30 Tage"
 
 #: collective/contract_management/vocabularies/renewal_periods.py:32
 msgid "36 months"
-msgstr ""
+msgstr "36 Monate"
 
 #: collective/contract_management/vocabularies/renewal_periods.py:29
 msgid "6 months"
-msgstr ""
+msgstr "6 Monate"
 
 #: collective/contract_management/vocabularies/reminder_types.py:30
 msgid "60 days"
-msgstr ""
+msgstr "60 Tage"
 
 #: collective/contract_management/vocabularies/reminder_types.py:31
 msgid "90 days"
-msgstr ""
+msgstr "Tage"
 
 #: collective/contract_management/profiles/default/types/Contracts.xml
 msgid "Container for contracts"
-msgstr ""
+msgstr "Kontainer für Verträge"
 
 #: collective/contract_management/profiles/default/types/Contract.xml
 msgid "Contract"
-msgstr ""
+msgstr "Vertrag"
 
 #: collective/contract_management/profiles/default/types/Contract.xml
 msgid "Contract CT to hold contract meta data and files."
-msgstr ""
+msgstr "Vertrag, enthält Vertragsdaten und Unterlagen"
 
 #: collective/contract_management/content/contract.py:21
 msgid "Contract begin"
-msgstr ""
+msgstr "Vertragsbeginn"
 
 #: collective/contract_management/content/contract.py:32
 msgid "Contract end"
-msgstr ""
+msgstr "Vertragsende"
 
 #: collective/contract_management/profiles/default/registry.xml
 msgid "Contract notice period"
-msgstr ""
+msgstr "Kündigungsfrist"
 
 #: collective/contract_management/profiles/default/types/Contracts.xml
 msgid "Contracts"
-msgstr ""
+msgstr "Verträge"
 
 #: collective/contract_management/profiles/default/registry.xml
 msgid "Dates"
-msgstr ""
+msgstr "Datum"
 
 #: collective/contract_management/profiles/default/types/Contract.xml
 #: collective/contract_management/profiles/default/types/Contracts.xml
 msgid "Edit"
-msgstr ""
+msgstr "Bearbeiten"
 
 #: collective/contract_management/configure.zcml:27
 msgid "Installs the collective.contract_management add-on."
@@ -103,23 +104,23 @@ msgstr ""
 #: collective/contract_management/content/contract.py:43
 #: collective/contract_management/profiles/default/registry.xml
 msgid "Notice period"
-msgstr ""
+msgstr "Kündigungsfrist"
 
 #: collective/contract_management/content/contract.py:55
 msgid "Reminder"
-msgstr ""
+msgstr "Erinnerung"
 
 #: collective/contract_management/content/contract.py:58
 msgid "Reminder, in days before Notice period."
-msgstr ""
+msgstr "Erinnerung, in Tagen vor der Kündigungsfrist."
 
 #: collective/contract_management/content/contract.py:67
 msgid "Renewal period"
-msgstr ""
+msgstr "Verlängerungszeitraum"
 
 #: collective/contract_management/content/contract.py:70
 msgid "Renewal time in month for the automatic renewal of the contract."
-msgstr ""
+msgstr "Zeit in Monaten, um die ein Vertrag erlängert wird."
 
 #: collective/contract_management/configure.zcml:36
 msgid "Uninstalls the collective.contract_management add-on."
