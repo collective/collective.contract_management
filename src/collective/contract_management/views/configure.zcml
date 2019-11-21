@@ -8,7 +8,7 @@
 
   <browser:page
     name="view"
-    for="collective.contract_management"
+    for="collective.contract_management.content.contract.IContract"
     class=".contract_view.ContractView"
     template="contract_view.pt"
     permission="zope2.View"
