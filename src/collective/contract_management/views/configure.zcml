@@ -8,11 +8,10 @@
 
   <browser:page
     name="view"
-    for="Products.CMFCore.interfaces.IFolderish"
+    for="collective.contract_management"
     class=".contract_view.ContractView"
     template="contract_view.pt"
     permission="zope2.View"
     />
-
 
 </configure>
