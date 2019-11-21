@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-11-21 10:41+0000\n"
+"POT-Creation-Date: 2019-11-21 17:57+0000\n"
 "PO-Revision-Date: 2019-11-21 11:32+0100\n"
 "Last-Translator: Maik Derstappen <md@inqbus.de>\n"
 "Language-Team: German\n"
@@ -72,23 +72,35 @@ msgstr "Vertrag"
 msgid "Contract CT to hold contract meta data and files."
 msgstr "Vertrag, enthält Vertragsdaten und Unterlagen"
 
-#: collective/contract_management/content/contract.py:21
+#: collective/contract_management/content/contract.py:20
+#: collective/contract_management/views/contract_view.pt:18
 msgid "Contract begin"
 msgstr "Vertragsbeginn"
 
-#: collective/contract_management/content/contract.py:32
+#: collective/contract_management/content/contract.py:31
+#: collective/contract_management/views/contract_view.pt:19
 msgid "Contract end"
 msgstr "Vertragsende"
 
 #: collective/contract_management/profiles/default/registry.xml
+#: collective/contract_management/upgrades/1001/registry.xml
 msgid "Contract notice period"
 msgstr "Kündigungsfrist"
+
+#: collective/contract_management/profiles/default/registry.xml
+msgid "Contract reminder"
+msgstr "Erinnerung an Vertragsüberarbeitung"
+
+#: collective/contract_management/profiles/default/registry.xml
+msgid "Contract reminder date"
+msgstr "Erinnerungsdatum für Vertragsüberarbeitung"
 
 #: collective/contract_management/profiles/default/types/Contracts.xml
 msgid "Contracts"
 msgstr "Verträge"
 
 #: collective/contract_management/profiles/default/registry.xml
+#: collective/contract_management/upgrades/1001/registry.xml
 msgid "Dates"
 msgstr "Datum"
 
@@ -101,24 +113,27 @@ msgstr "Bearbeiten"
 msgid "Installs the collective.contract_management add-on."
 msgstr ""
 
-#: collective/contract_management/content/contract.py:43
+#: collective/contract_management/content/contract.py:42
 #: collective/contract_management/profiles/default/registry.xml
+#: collective/contract_management/upgrades/1001/registry.xml
 msgid "Notice period"
 msgstr "Kündigungsfrist"
 
-#: collective/contract_management/content/contract.py:55
+#: collective/contract_management/content/contract.py:54
+#: collective/contract_management/views/contract_view.pt:21
 msgid "Reminder"
 msgstr "Erinnerung"
 
-#: collective/contract_management/content/contract.py:58
+#: collective/contract_management/content/contract.py:57
 msgid "Reminder, in days before Notice period."
 msgstr "Erinnerung, in Tagen vor der Kündigungsfrist."
 
-#: collective/contract_management/content/contract.py:67
+#: collective/contract_management/content/contract.py:66
+#: collective/contract_management/views/contract_view.pt:22
 msgid "Renewal period"
 msgstr "Verlängerungszeitraum"
 
-#: collective/contract_management/content/contract.py:70
+#: collective/contract_management/content/contract.py:69
 msgid "Renewal time in month for the automatic renewal of the contract."
 msgstr "Zeit in Monaten, um die ein Vertrag erlängert wird."
 
@@ -130,6 +145,14 @@ msgstr ""
 #: collective/contract_management/profiles/default/types/Contracts.xml
 msgid "View"
 msgstr ""
+
+#: collective/contract_management/views/contract_view.pt:35
+msgid "attachments"
+msgstr "Anhänge"
+
+#: collective/contract_management/views/contract_view.pt:29
+msgid "beforehand"
+msgstr "zuvor"
 
 #: collective/contract_management/configure.zcml:27
 msgid "collective.contract_management"

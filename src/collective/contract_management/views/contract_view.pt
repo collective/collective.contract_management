@@ -4,12 +4,40 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="collective.contract_management"
       metal:use-macro="context/main_template/macros/master">
-<body>
-  <metal:block fill-slot="content-title">
-      <h1 class="documentFirstHeading" tal:content="context/title" />
-  </metal:block>
 
-  <metal:block fill-slot="content-core">
-  </metal:block>
+<metal:style_slot fill-slot="style_slot">
+    <link rel="stylesheet" type="text/css"
+      href="++plone++collective.contract_management/main.min.css" />
+</metal:style_slot>
+
+<body>
+
+<metal:block fill-slot="content-core">
+  <section class="table">
+    <header>
+      <div i18n:translate="">Contract begin</div>
+      <div i18n:translate="">Contract end</div>
+      <div i18n:translate="">Notice period</div>
+      <div i18n:translate="">Reminder</div>
+      <div i18n:translate="">Renewal period</div>
+    </header>
+    <article>
+      <div tal:content="structure view/w/start/render"></div>
+      <div tal:content="structure view/w/end/render"></div>
+      <div tal:content="structure view/w/notice_period/render"></div>
+      <div>
+        <span tal:content="structure view/w/reminder/render" /> <span i18n:translate="">beforehand</span>
+      </div>
+      <div tal:content="structure view/w/renewal_period/render"></div>
+    </article>
+  </section>
+
+    <header i18n:translate="">attachments</header>
+    <ul class="attachments">
+      <li tal:repeat="item context/@@contentlisting"><img class="icon" tal:condition="item/MimeTypeIcon|nothing" tal:attributes="src item/MimeTypeIcon" /><a tal:attributes="href string:${item/getURL}" tal:content="item/Title"></a></li>
+    </ul>
+
+
+</metal:block>
 </body>
 </html>
