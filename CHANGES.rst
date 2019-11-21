@@ -5,7 +5,11 @@ Changelog
 1.0b3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add Collection to allowed_content_types for Contracts CT
+  [MrTango]
+
+- Add contract_view and locales
+  [MrTango]
 
 
 1.0b2 (2019-11-21)
