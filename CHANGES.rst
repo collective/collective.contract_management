@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0b2 (unreleased)
+1.0b2 (2019-11-21)
 ------------------
 
 - Enable Notice period criteria for Collections
