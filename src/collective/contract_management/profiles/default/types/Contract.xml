@@ -55,7 +55,6 @@
     <!--<element value="plone.nextprevioustoggle" />-->
     <!--<element value="plone.nextpreviousenabled" />-->
     <!--<element value="plone.navigationroot" />-->
-    <element value="plone.selectablecontrainstypes" />
   </property>
 
   <!-- View information -->
