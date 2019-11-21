@@ -12,8 +12,6 @@ from zope.component import queryUtility
 import unittest
 
 
-
-
 class ContractsIntegrationTest(unittest.TestCase):
 
     layer = COLLECTIVE_CONTRACT_MANAGEMENT_INTEGRATION_TESTING
@@ -84,7 +82,7 @@ class ContractsIntegrationTest(unittest.TestCase):
             self.portal,
             'contracts_id',
             title='Contracts container',
-         )
+        )
         self.parent = self.portal[parent_id]
         with self.assertRaises(InvalidParameterError):
             api.content.create(

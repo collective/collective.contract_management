@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+from collective.contract_management import _
 # from plone.app.textfield import RichText
 # from plone.autoform import directives
 from plone.dexterity.content import Container
@@ -10,33 +12,30 @@ from zope import schema
 from zope.interface import implementer
 
 
-from collective.contract_management import _
-
-
 class IContract(model.Schema):
     """ Marker interface and Dexterity Python Schema for Contract
     """
 
     start = schema.Date(
-       title=_(
-           u'Contract begin',
-       ),
-       description=_(
-           u'',
-       ),
-       # defaultFactory=get_default_begin,
-       required=True,
+        title=_(
+            u'Contract begin',
+        ),
+        description=_(
+            u'',
+        ),
+        # defaultFactory=get_default_begin,
+        required=True,
     )
 
     end = schema.Date(
-       title=_(
-           u'Contract end',
-       ),
-       description=_(
-           u'',
-       ),
-       # defaultFactory=get_default_end,
-       required=True,
+        title=_(
+            u'Contract end',
+        ),
+        description=_(
+            u'',
+        ),
+        # defaultFactory=get_default_end,
+        required=True,
     )
 
     notice_period = schema.Date(
@@ -74,8 +73,6 @@ class IContract(model.Schema):
         default=u'12',
         required=False,
     )
-
-
 
 
 @implementer(IContract)
