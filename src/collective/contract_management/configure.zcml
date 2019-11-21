@@ -46,10 +46,9 @@
 
   <include package=".indexers" />
 
-    <include package=".vocabularies" />
+  <include package=".vocabularies" />
 
 
-    <include package=".vocabularies" />
 
 
 </configure>

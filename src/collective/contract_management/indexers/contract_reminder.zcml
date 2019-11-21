@@ -1,0 +1,6 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <adapter factory=".contract_reminder.contract_reminder"
+    name="contract_reminder" />
+
+</configure>

@@ -4,7 +4,6 @@
 
   -*- extra stuff goes here -*-
 
-  <include package=".notice_period" />
-
+  <include file="contract_reminder.zcml" />
 
 </configure>

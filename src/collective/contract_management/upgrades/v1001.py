@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from . import logger
-from plone import api
 from base import reload_gs_profile
+from plone import api
 
 
 def upgrade(setup_tool=None):
@@ -11,7 +11,6 @@ def upgrade(setup_tool=None):
     logger.info("Running upgrade (Python): Enable Notice period criteria for Collections")
     reload_gs_profile(setup_tool)
     results = api.content.find(portal_type='Contract')
-    import pdb; pdb.set_trace()
     for brain in results:
         obj = brain.getObject()
         obj.reindexObject()
