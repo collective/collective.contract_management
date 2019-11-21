@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0b3 (unreleased)
+1.0b3 (2019-11-21)
 ------------------
 
 - Add Collection to allowed_content_types for Contracts CT
