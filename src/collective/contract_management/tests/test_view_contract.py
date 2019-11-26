@@ -10,7 +10,7 @@ from zope.component import getMultiAdapter
 import unittest
 
 
-from zope.component.interfaces import ComponentLookupError
+# from zope.component.interfaces import ComponentLookupError
 
 
 class ViewsIntegrationTest(unittest.TestCase):
