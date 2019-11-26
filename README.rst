@@ -11,7 +11,7 @@ Provides Contracts container and Contract item CT's, to manage contracts and the
 Features
 --------
 
-- Overview of all contracts or contracts which are due to verify, based on collections
+- Overview of all contracts or contracts which are due to verify, based on Collections
 - ical export of a notice period event, including a defined reminder (NOT IMPLEMENTED)
 - ical export of multible contract notice periods (NOT IMPLEMENTED)
 - works well in combination with `collective.collectionfilter <https://pypi.org/project/collective.collectionfilter/>`_
