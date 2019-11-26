@@ -38,7 +38,6 @@ class ViewsIntegrationTest(unittest.TestCase):
         #         (self.portal['front-page'], self.portal.REQUEST),
         #         name='view'
         #     )
-        from collective.contract_management.content.contract import IContract
         view = getMultiAdapter(
             (self.doc1, self.portal.REQUEST),
             name='view'
