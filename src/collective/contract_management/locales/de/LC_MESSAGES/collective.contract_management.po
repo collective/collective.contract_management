@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-11-21 17:57+0000\n"
+"POT-Creation-Date: 2019-11-26 09:57+0000\n"
 "PO-Revision-Date: 2019-11-21 11:32+0100\n"
 "Last-Translator: Maik Derstappen <md@inqbus.de>\n"
 "Language-Team: German\n"
@@ -111,7 +111,7 @@ msgstr "Bearbeiten"
 
 #: collective/contract_management/configure.zcml:27
 msgid "Installs the collective.contract_management add-on."
-msgstr ""
+msgstr "Installiert die collective.contract_management Erweiterung."
 
 #: collective/contract_management/content/contract.py:42
 #: collective/contract_management/profiles/default/registry.xml
@@ -139,12 +139,12 @@ msgstr "Zeit in Monaten, um die ein Vertrag erlängert wird."
 
 #: collective/contract_management/configure.zcml:36
 msgid "Uninstalls the collective.contract_management add-on."
-msgstr ""
+msgstr "Deinstalliert die collective.contract_management Erweiterung."
 
 #: collective/contract_management/profiles/default/types/Contract.xml
 #: collective/contract_management/profiles/default/types/Contracts.xml
 msgid "View"
-msgstr ""
+msgstr "Ansicht"
 
 #: collective/contract_management/views/contract_view.pt:35
 msgid "attachments"

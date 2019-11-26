@@ -4,6 +4,7 @@
   <gs:registerProfile name="1002"
     title="Reload FTI settings, to allow nested Contracts containers"
     description='Configuration for version 1002'
+    directory="1002"
     for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
     provides="Products.GenericSetup.interfaces.EXTENSION" />
 

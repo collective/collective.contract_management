@@ -4,6 +4,7 @@
   <gs:registerProfile name="1001"
     title="Enable Notice period criteria for Collections"
     description='Configuration for version 1001'
+    directory="1001"
     for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
     provides="Products.GenericSetup.interfaces.EXTENSION" />
 

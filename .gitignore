@@ -39,3 +39,4 @@ reports/
 !.travis.yml
 !src/collective
 /.coverage*
+**/__pycache__/**

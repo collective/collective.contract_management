@@ -56,6 +56,9 @@ setup(
         'plone.app.dexterity',
     ],
     extras_require={
+        'collectionfilter': [
+            "collective.collectionfilter",
+        ],
         'test': [
             'plone.app.testing',
             # Plone KGS does not use this version, because it would break

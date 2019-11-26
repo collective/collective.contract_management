@@ -36,7 +36,7 @@ Install collective.contract_management by adding it to your buildout::
     ...
 
     eggs =
-        collective.contract_management
+        collective.contract_management[collectionfilter]
 
 
 and then running ``bin/buildout``

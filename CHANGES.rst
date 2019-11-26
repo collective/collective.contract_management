@@ -11,6 +11,9 @@ Changelog
 - Make start/end date not required
   [MrTango]
 
+- Fix upgrade steps to not show up in addon control panel
+  [MrTango]
+
 
 1.0b3 (2019-11-21)
 ------------------
