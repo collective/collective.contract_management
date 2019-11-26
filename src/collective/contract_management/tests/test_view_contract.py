@@ -42,7 +42,7 @@ class ViewsIntegrationTest(unittest.TestCase):
             (self.doc1, self.portal.REQUEST),
             name='view'
         )
-        self.assertFalse(IContract.providedBy(view))
+        self.assertFalse(IContractView.providedBy(view))
 
 
 class ViewsFunctionalTest(unittest.TestCase):
