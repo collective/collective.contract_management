@@ -8,6 +8,8 @@ from plone.indexer import indexer
 @indexer(IContract)
 def contract_reminder(obj):
     """Calculate and return the value for the indexer"""
+    if not obj.notice_period:
+        return
     if not obj.reminder:
         return
     contract_reminder = obj.notice_period - timedelta(int(obj.reminder))

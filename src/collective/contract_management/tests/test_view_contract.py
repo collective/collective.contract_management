@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from collective.contract_management.testing import COLLECTIVE_CONTRACT_MANAGEMENT_FUNCTIONAL_TESTING
 from collective.contract_management.testing import COLLECTIVE_CONTRACT_MANAGEMENT_INTEGRATION_TESTING
+from collective.contract_management.views.contract_view import IContractView
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
@@ -17,26 +18,30 @@ class ViewsIntegrationTest(unittest.TestCase):
     def setUp(self):
         self.portal = self.layer['portal']
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
-        api.content.create(self.portal, 'Folder', 'other-folder')
-        api.content.create(self.portal, 'Document', 'front-page')
+        self.contracts = api.content.create(self.portal, 'Contracts', 'contracts')
+        self.contract1 = api.content.create(self.contracts, 'Contract', 'contract1')
+        self.doc1 = api.content.create(self.portal, 'Document', 'front-page')
 
     def test_view_is_registered(self):
         view = getMultiAdapter(
-            (self.portal['other-folder'], self.portal.REQUEST),
+            (self.contract1, self.portal.REQUEST),
             name='view'
         )
         self.assertTrue(view.__name__ == 'view')
-        # self.assertTrue(
-        #     'Sample View' in view(),
-        #     'Sample View is not found in view'
-        # )
+        self.assertTrue(IContractView.providedBy(view))
 
     def test_view_not_matching_interface(self):
-        with self.assertRaises(ComponentLookupError):
-            getMultiAdapter(
-                (self.portal['front-page'], self.portal.REQUEST),
-                name='view'
-            )
+        # with self.assertRaises(ComponentLookupError):
+        #     getMultiAdapter(
+        #         (self.portal['front-page'], self.portal.REQUEST),
+        #         name='view'
+        #     )
+        from collective.contract_management.content.contract import IContract
+        view = getMultiAdapter(
+            (self.doc1, self.portal.REQUEST),
+            name='view'
+        )
+        self.assertFalse(IContract.providedBy(view))
 
 
 class ViewsFunctionalTest(unittest.TestCase):

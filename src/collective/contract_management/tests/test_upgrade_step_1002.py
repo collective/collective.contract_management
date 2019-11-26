@@ -15,6 +15,10 @@ class UpgradeStepIntegrationTest(unittest.TestCase):
         self.portal = self.layer['portal']
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
 
+    def test_upgrade_step(self):
+        # dummy, add tests here
+        self.assertTrue(True)
+
 
 class UpgradeStepFunctionalTest(unittest.TestCase):
 
