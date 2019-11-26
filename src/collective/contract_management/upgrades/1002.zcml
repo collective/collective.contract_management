@@ -1,0 +1,24 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+  xmlns:gs="http://namespaces.zope.org/genericsetup">
+
+  <gs:registerProfile name="1002"
+    title="Reload FTI settings, to allow nested Contracts containers"
+    description='Configuration for version 1002'
+    for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+  <gs:upgradeSteps source="1001"
+    destination="1002"
+    profile="collective.contract_management:default">
+
+    <gs:upgradeStep title="Reload FTI settings, to allow nested Contracts containers"
+      description=""
+      handler=".v1002.upgrade" />
+
+    <gs:upgradeDepends title="Reload FTI settings, to allow nested Contracts containers (GS profile)"
+      description=""
+      import_profile="collective.contract_management.upgrades:1002" />
+
+  </gs:upgradeSteps>
+
+</configure>
