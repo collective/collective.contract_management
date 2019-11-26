@@ -24,7 +24,7 @@ class IContract(model.Schema):
             u'',
         ),
         # defaultFactory=get_default_begin,
-        required=True,
+        required=False,
     )
 
     end = schema.Date(
@@ -35,7 +35,7 @@ class IContract(model.Schema):
             u'',
         ),
         # defaultFactory=get_default_end,
-        required=True,
+        required=False,
     )
 
     notice_period = schema.Date(

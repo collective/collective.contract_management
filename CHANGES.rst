@@ -5,7 +5,11 @@ Changelog
 1.0b4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Allow nested Contracts containers
+  [MrTango]
+
+- Make start/end date not required
+  [MrTango]
 
 
 1.0b3 (2019-11-21)

@@ -6,25 +6,15 @@
 collective.contract_management
 ==============================
 
-Tell me what your product does
+Provides Contracts container nd Contract item CT's, to manage contract and there lifespan. It helps you to keep track of the notice period and start on time with the negotiation, planing or canceling for each contract.
 
 Features
 --------
 
-- Can be bullet points
-
-
-Examples
---------
-
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
-
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
+- Overview of all contracts or contracts which are to verify, based on collections
+- ical export of a notice period event, including a defined reminder (NOT IMPLEMENTED)
+- ical export of multible contract notice periods
+- works well in combination with `collective.collectionfilter <https://pypi.org/project/collective.collectionfilter/>`_
 
 
 Translations
@@ -32,7 +22,8 @@ Translations
 
 This product has been translated into
 
-- Klingon (thanks, K'Plai)
+- English (MrTango)
+- German (MrTango)
 
 
 Installation
@@ -56,14 +47,13 @@ Contribute
 
 - Issue Tracker: https://github.com/collective/collective.contract_management/issues
 - Source Code: https://github.com/collective/collective.contract_management
-- Documentation: https://docs.plone.org/foo/bar
 
 
 Support
 -------
 
 If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
+If you have questions or need adjustments, contact md@derico.de.
 
 
 License

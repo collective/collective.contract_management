@@ -21,6 +21,7 @@
   <property name="global_allow">True</property>
   <property name="filter_content_types">True</property>
   <property name="allowed_content_types">
+    <element value="Contracts" />
     <element value="Contract" />
     <element value="Folder" />
     <element value="Collection" />
@@ -52,9 +53,9 @@
     <!--<element value="plone.richtext"/>-->
     <!--<element value="plone.tableofcontents"/>-->
     <!--<element value="plone.versioning" />-->
-    <!--<element value="plone.translatable" />-->
-    <!--<element value="plone.nextprevioustoggle" />-->
-    <!--<element value="plone.nextpreviousenabled" />-->
+    <element value="plone.translatable" />
+    <element value="plone.nextprevioustoggle" />
+    <element value="plone.nextpreviousenabled" />
     <!--<element value="plone.navigationroot" />-->
     <!--<element value="plone.selectablecontrainstypes" />-->
   </property>

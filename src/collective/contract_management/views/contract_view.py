@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from collective.contract_management import _
+# from collective.contract_management import _
 from plone.dexterity.browser.view import DefaultView
+
 
 # from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
