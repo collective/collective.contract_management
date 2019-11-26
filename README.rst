@@ -13,7 +13,7 @@ Features
 
 - Overview of all contracts or contracts which are to verify, based on collections
 - ical export of a notice period event, including a defined reminder (NOT IMPLEMENTED)
-- ical export of multible contract notice periods
+- ical export of multible contract notice periods (NOT IMPLEMENTED)
 - works well in combination with `collective.collectionfilter <https://pypi.org/project/collective.collectionfilter/>`_
 
 
