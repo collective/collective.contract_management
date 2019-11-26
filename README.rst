@@ -6,7 +6,7 @@
 collective.contract_management
 ==============================
 
-Provides Contracts container nd Contract item CT's, to manage contract and there lifespan. It helps you to keep track of the notice period and start on time with the negotiation, planing or canceling for each contract.
+Provides Contracts container and Contract item CT's, to manage contracts and there lifespan. It helps you to keep track of the notice period and start on time with the negotiation, planing or canceling for each contract.
 
 Features
 --------
