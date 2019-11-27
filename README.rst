@@ -2,6 +2,28 @@
    If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
    This text does not appear on pypi or github. It is a comment.
 
+.. image:: https://travis-ci.org/collective/collective.contract_management.svg?branch=master
+    :target: https://travis-ci.org/collective/collective.contract_management
+
+.. image:: https://coveralls.io/repos/github/collective/collective.contract_management/badge.svg?branch=master
+    :target: https://coveralls.io/github/collective/collective.contract_management?branch=master
+    :alt: Coveralls
+
+.. image:: https://img.shields.io/pypi/v/collective.contract_management.svg
+    :target: https://pypi.python.org/pypi/collective.contract_management/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/status/collective.contract_management.svg
+    :target: https://pypi.python.org/pypi/collective.contract_management
+    :alt: Egg Status
+
+.. image:: https://img.shields.io/pypi/pyversions/collective.contract_management.svg?style=plastic   :alt: Supported - Python Versions
+
+.. image:: https://img.shields.io/pypi/l/collective.contract_management.svg
+    :target: https://pypi.python.org/pypi/collective.contract_management/
+    :alt: License
+
+
 ==============================
 collective.contract_management
 ==============================
