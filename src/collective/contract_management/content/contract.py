@@ -74,6 +74,16 @@ class IContract(model.Schema):
         required=False,
     )
 
+    contract_amount = schema.TextLine(
+        title=_(
+            u'Contract Amount',
+        ),
+        description=_(
+            u'The amount of the whole contract.',
+        ),
+        required=False,
+    )
+
 
 @implementer(IContract)
 class Contract(Container):

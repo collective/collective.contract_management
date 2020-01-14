@@ -4,8 +4,14 @@
     <indexed_attr value="notice_period" />
   </index>
   <column value="notice_period"/>
+
   <index name="contract_reminder" meta_type="DateIndex">
     <indexed_attr value="contract_reminder" />
   </index>
   <column value="contract_reminder"/>
+
+  <index name="contract_amount" meta_type="FieldIndex">
+    <indexed_attr value="contract_amount" />
+  </index>
+  <column value="contract_amount"/>
 </object>
