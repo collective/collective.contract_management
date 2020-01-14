@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='collective.contract_management',
-    version='1.0b5.dev0',
+    version='1.0b5',
     description="Contract management for Plone. Kepp track of company contracts and there contract duration.",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/

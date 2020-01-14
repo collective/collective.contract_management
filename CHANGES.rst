@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0b5 (unreleased)
+1.0b5 (2020-01-14)
 ------------------
 
 - Add contract_amount field to Contract and add an index for it
