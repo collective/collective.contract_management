@@ -5,7 +5,8 @@ Changelog
 1.0b5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add contract_amount field to Contract and add an index for it
+  [MrTango]
 
 
 1.0b4 (2019-11-26)
