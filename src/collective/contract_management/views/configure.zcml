@@ -8,7 +8,7 @@
 
   <browser:page
     name="ics_view"
-    for="Products.CMFCore.interfaces.IFolderish"
+    for="collective.contract_management.content.contract.IContract"
     class=".ics_view.IcsView"
     permission="zope2.View"
     />

@@ -45,7 +45,7 @@ def construct_icalendar(context, events):
         ical_event = IICalendarEventComponent(event).to_ical()
         ical_alarm = icalendar.Alarm()
         ical_alarm.add("action", "DISPLAY")
-        alarm_value = (event.end - event.notice_period).days + event.reminder
+        alarm_value = (event.end - event.notice_period).days + int(event.reminder)
         ical_alarm.add("trigger", timedelta(days=-alarm_value))
         ical_event.add_component(ical_alarm)
         cal.add_component(ical_event)
@@ -96,11 +96,11 @@ class ICalendarContractEventComponent(object):
 
     @property
     def dtstart(self):
-        return {"value": self.event.start.date()}
+        return {"value": self.event.end.date()}
 
     @property
     def dtend(self):
-        return {"value": self.event.end.date()}
+        return {"value": self.event.end.date() + timedelta(days=+1)}
 
     @property
     def categories(self):
