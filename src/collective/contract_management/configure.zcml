@@ -40,6 +40,18 @@
       name="collective.contract_management-hiddenprofiles"
       />
 
+  <adapter
+      for="collective.contract_management.content.contract.IContract"
+      factory=".ical.ICalendarContractEventComponent"
+      />
+
+  <adapter
+      for="collective.contract_management.content.contract.IContract"
+      provides="plone.event.interfaces.IICalendar"
+      factory=".ical.calendar_from_event"
+      />
+
+
   <!-- -*- extra stuff goes here -*- -->
 
     <include package=".behaviors" />

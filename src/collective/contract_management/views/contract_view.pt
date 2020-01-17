@@ -22,13 +22,13 @@
       <div i18n:translate="">Renewal period</div>
     </header>
     <article>
-      <div tal:content="python:here.toLocalizedTime(view.context.start)"></div>
-      <div tal:content="python:here.toLocalizedTime(view.context.end)"></div>
-      <div tal:content="structure view/context/notice_period"></div>
+      <div tal:content="python: here.toLocalizedTime(view.context.start, False, time_only=None)"></div>
+      <div tal:content="python: here.toLocalizedTime(view.context.end, False, time_only=None)"></div>
+      <div tal:content="structure view/w/notice_period/render"></div>
       <div>
-        <span tal:content="structure view/context/reminder" /> <span i18n:translate="">beforehand</span>
+        <span tal:content="structure view/w/reminder/render" /> <span i18n:translate="">beforehand</span>
       </div>
-      <div tal:content="structure view/context/renewal_period"></div>
+      <div tal:content="structure view/w/renewal_period/render"></div>
     </article>
   </section>
 
