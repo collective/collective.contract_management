@@ -7,13 +7,6 @@
   -*- extra stuff goes here -*-
 
   <browser:page
-    name="contracts-as-ical"
-    for="Products.CMFCore.interfaces.IFolderish"
-    class=".contracts_as_ical.ContractsAsIcal"
-    permission="zope2.View"
-    />
-
-  <browser:page
     name="contract-as-ical"
     for="Products.CMFCore.interfaces.IFolderish"
     class=".contract_as_ical.ContractAsIcal"
