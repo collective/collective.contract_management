@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0b1 (unreleased)
+2.0b1 (2020-01-20)
 ------------------
 
 - Add contracts_ics_view, calendar_from_collection adapter, locales and optimze styling on contract_view
