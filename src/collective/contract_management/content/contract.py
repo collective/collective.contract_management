@@ -1,26 +1,13 @@
 # -*- coding: utf-8 -*-
 
 from collective.contract_management import _
-
-# from plone.app.event.dx.behaviors import IEventBasic
-# from plone.app.textfield import RichText
 from plone.app.z3cform.widget import DatetimeWidget
 from plone.autoform import directives
 from plone.dexterity.content import Container
 from plone.event.interfaces import IEvent
-
-# from plone.namedfile import field as namedfile
 from plone.supermodel import model
-
-# from plone.supermodel.directives import fieldset
-# from z3c.form.browser.radio import RadioFieldWidget
 from zope import schema
-from zope.interface import implementer
-from zope.interface import Invalid
-from zope.interface import invariant
-
-
-
+from zope.interface import implementer, Invalid, invariant
 
 
 class StartBeforeEnd(Invalid):
@@ -30,8 +17,9 @@ class StartBeforeEnd(Invalid):
 class IContract(model.Schema):
     """ Marker interface and Dexterity Python Schema for Contract
     """
+
     # You have to import the widget!
-    directives.widget('start', DatetimeWidget, pattern_options={'time': False})
+    directives.widget("start", DatetimeWidget, pattern_options={"time": False})
     start = schema.Datetime(
         title=_(u"Contract begin"),
         description=_(u""),
@@ -39,7 +27,7 @@ class IContract(model.Schema):
         required=False,
     )
 
-    directives.widget('end', DatetimeWidget, pattern_options={'time': False})
+    directives.widget("end", DatetimeWidget, pattern_options={"time": False})
     end = schema.Datetime(
         title=_(u"Contract end"),
         description=_(u""),
@@ -47,7 +35,7 @@ class IContract(model.Schema):
         required=False,
     )
 
-    directives.widget('notice_period', DatetimeWidget, pattern_options={'time': False})
+    directives.widget("notice_period", DatetimeWidget, pattern_options={"time": False})
     notice_period = schema.Datetime(
         title=_(u"Notice period"),
         description=_(u""),
@@ -75,7 +63,7 @@ class IContract(model.Schema):
     )
 
     contract_amount = schema.TextLine(
-        title=_(u"Contract Amount"),
+        title=_(u"Contract amount"),
         description=_(u"The amount of the whole contract."),
         required=False,
     )

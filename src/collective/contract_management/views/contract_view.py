@@ -2,13 +2,8 @@
 
 from datetime import datetime
 from plone import api
-# from collective.contract_management import _
 from plone.dexterity.browser.view import DefaultView
-from zope.interface import implementer
-from zope.interface import Interface
-
-
-# from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from zope.interface import implementer, Interface
 
 
 class IContractView(Interface):
@@ -18,7 +13,6 @@ class IContractView(Interface):
 
 @implementer(IContractView)
 class ContractView(DefaultView):
-
     def __call__(self):
 
         start = datetime.combine(self.context.start, datetime.min.time())

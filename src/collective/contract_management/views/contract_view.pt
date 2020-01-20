@@ -1,43 +1,69 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:metal="http://xml.zope.org/namespaces/metal"
-      xmlns:tal="http://xml.zope.org/namespaces/tal"
-      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      i18n:domain="collective.contract_management"
-      metal:use-macro="context/main_template/macros/master">
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  i18n:domain="collective.contract_management"
+  metal:use-macro="context/main_template/macros/master">
 
-<metal:style_slot fill-slot="style_slot">
-    <link rel="stylesheet" type="text/css"
+  <metal:style_slot fill-slot="style_slot">
+    <link rel="stylesheet"
+      type="text/css"
       href="++plone++collective.contract_management/main.min.css" />
-</metal:style_slot>
+  </metal:style_slot>
 
-<body>
+  <body>
 
-<metal:block fill-slot="content-core">
-  <section class="table">
-    <header>
-      <div i18n:translate="">Contract begin</div>
-      <div i18n:translate="">Contract end</div>
-      <div i18n:translate="">Notice period</div>
-      <div i18n:translate="">Reminder</div>
-      <div i18n:translate="">Renewal period</div>
-    </header>
-    <article>
-      <div tal:content="python: here.toLocalizedTime(view.context.start, False, time_only=None)"></div>
-      <div tal:content="python: here.toLocalizedTime(view.context.end, False, time_only=None)"></div>
-      <div tal:content="structure view/w/notice_period/render"></div>
-      <div>
-        <span tal:content="structure view/w/reminder/render" /> <span i18n:translate="">beforehand</span>
-      </div>
-      <div tal:content="structure view/w/renewal_period/render"></div>
-    </article>
-  </section>
+    <metal:block fill-slot="content-core">
 
-    <header i18n:translate="">attachments</header>
-    <ul class="attachments">
-      <li tal:repeat="item context/@@contentlisting"><img class="icon" tal:condition="item/MimeTypeIcon|nothing" tal:attributes="src item/MimeTypeIcon" /><a tal:attributes="href string:${item/getURL}" tal:content="item/Title"></a></li>
-    </ul>
+    <div class="event-calendar">
+    <dl>
+      <dt><strong>Termin zum Kalender hinzufügen</strong></dt>
+      <dd>
+          <a tal:attributes="href string:${here/absolute_url}/@@ics_view" rel="nofollow" title="Download the contract in iCal-Format">
+            <img src="++plone++plone.app.event/calendar.svg" alt="" class="icalIcon" width="14" height="14" />
+            <span>iCal</span></a>
+      </dd>
+
+    </dl>
+
+    </div>
+
+    <div class="contract_details">
+      <dl>
+        <dt i18n:translate="">Contract begin</dt>
+        <dd tal:content="python: here.toLocalizedTime(view.context.start, False, time_only=None)"></dd>
+        <dt i18n:translate="">Contract end</dt>
+        <dd tal:content="python: here.toLocalizedTime(view.context.end, False, time_only=None)"></dd>
+        <dt i18n:translate="">Notice period</dt>
+        <dd tal:content="structure view/w/notice_period/render"></dd>
+        <dt i18n:translate="">Reminder</dt>
+        <dd>
+          <span tal:content="structure view/w/reminder/render" />
+          <span i18n:translate="">beforehand</span>
+        </dd>
+        <dt i18n:translate="">Renewal period</dt>
+        <dd tal:content="structure view/w/renewal_period/render"></dd>
+        <dt i18n:translate="">Contract amount</dt>
+        <dd tal:content="structure view/w/contract_amount/render"></dd>
+      </dl>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="attachments">
+      <header i18n:translate="">attachments</header>
+      <ul>
+        <li tal:repeat="item context/@@contentlisting">
+          <img class="icon"
+            tal:condition="item/MimeTypeIcon|nothing"
+            tal:attributes="src item/MimeTypeIcon" />
+          <a tal:attributes="href string:${item/getURL}"
+            tal:content="item/Title"></a>
+        </li>
+      </ul>
+    </div>
 
 
-</metal:block>
-</body>
+    </metal:block>
+  </body>
 </html>

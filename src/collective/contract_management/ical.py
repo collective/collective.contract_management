@@ -1,15 +1,14 @@
+# -*- coding: utf-8 -*-
+
 from Acquisition import aq_inner
 from collective.contract_management.content.contract import IContract
-from datetime import datetime
-from datetime import timedelta
+from datetime import datetime, timedelta
 from plone.app.contentlisting.interfaces import IContentListingObject
 from plone.app.event.base import default_timezone
-from plone.event.interfaces import IEvent
-from plone.event.interfaces import IICalendar
-from plone.event.interfaces import IICalendarEventComponent
+from plone.event.interfaces import IEvent, IICalendarEventComponent
 from plone.event.utils import utc
 from Products.ZCatalog.interfaces import ICatalogBrain
-from zope.interface import implementer
+from zope.interface import implementer, Interface
 
 import icalendar
 
@@ -52,6 +51,12 @@ def construct_icalendar(context, events):
     return cal
 
 
+class IICalendar(Interface):
+    """Adapter, which is used to construct an icalendar object.
+
+    """
+
+
 @implementer(IICalendar)
 def calendar_from_event(context):
     """Event adapter. Returns an icalendar.Calendar object from an Event
@@ -59,6 +64,18 @@ def calendar_from_event(context):
     """
     context = aq_inner(context)
     return construct_icalendar(context, [context])
+
+
+@implementer(IICalendar)
+def calendar_from_collection(context):
+    """Container/Event adapter. Returns an icalendar.Calendar object from a
+    Collection.
+    """
+    context = aq_inner(context)
+    # The keyword argument brains=False was added to plone.app.contenttypes
+    # after 1.0
+    result = context.results(batch=False, sort_on='start')
+    return construct_icalendar(context, result)
 
 
 @implementer(IICalendarEventComponent)

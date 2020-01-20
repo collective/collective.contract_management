@@ -2,6 +2,7 @@
 // requires vscode ext: mrcrowl.easy-less
 
 .portaltype-contract.template-view {
+   position: releative;
   .table{
     display: table;
     border-spacing: 0.8em;
@@ -23,8 +24,61 @@
       }
     }
   }
-  ul {
-    padding: 0 1.5em ;
-    .icon { margin-right: 0.2em;}
+
+  .event-calendar{
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    max-width: 100%;
+    width: 150px;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    background-color: #eee;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  .contract_details{
+    max-width: 500px;
+    clear:both;
+
+    dl {
+      margin: 0;
+      padding: 0;
+      padding-bottom: 1em;
+      clear:both;
+      dt{
+        margin: 0;
+        padding: 0;
+        width:33%;
+        float:left;
+        clear: left;
+        line-height: 2em;
+      }
+      dd{
+        line-height: 2em;
+        margin: 0;
+        padding: 0;
+        width:67%;
+        float:left;
+      }
+    }
+  }
+
+  .attachments {
+    clear: both;
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    header{
+      font-size: 130%;
+      font-weight: 600;
+    }
+    ul {
+      padding: 0 1.5em ;
+      .icon { margin-right: 0.2em;}
+    }
   }
 }

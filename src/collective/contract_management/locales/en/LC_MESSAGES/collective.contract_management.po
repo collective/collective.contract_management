@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-11-26 09:57+0000\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,13 +68,18 @@ msgstr ""
 msgid "Contract CT to hold contract meta data and files."
 msgstr ""
 
-#: collective/contract_management/content/contract.py:20
-#: collective/contract_management/views/contract_view.pt:18
+#: collective/contract_management/content/contract.py:78
+#: collective/contract_management/views/contract_view.pt:32
+msgid "Contract amount"
+msgstr ""
+
+#: collective/contract_management/content/contract.py:36
+#: collective/contract_management/views/contract_view.pt:19
 msgid "Contract begin"
 msgstr ""
 
-#: collective/contract_management/content/contract.py:31
-#: collective/contract_management/views/contract_view.pt:19
+#: collective/contract_management/content/contract.py:44
+#: collective/contract_management/views/contract_view.pt:21
 msgid "Contract end"
 msgstr ""
 
@@ -105,27 +110,35 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: collective/contract_management/configure.zcml:27
+#: collective/contract_management/behaviors/contract_event_basic.py:25
+msgid "Give in a project name"
+msgstr ""
+
+#: collective/contract_management/configure.zcml:28
 msgid "Installs the collective.contract_management add-on."
 msgstr ""
 
-#: collective/contract_management/content/contract.py:42
+#: collective/contract_management/content/contract.py:52
 #: collective/contract_management/profiles/default/registry.xml
 #: collective/contract_management/upgrades/1001/registry.xml
 msgid "Notice period"
 msgstr ""
 
-#: collective/contract_management/content/contract.py:54
-#: collective/contract_management/views/contract_view.pt:21
+#: collective/contract_management/behaviors/contract_event_basic.py:24
+msgid "Project"
+msgstr ""
+
+#: collective/contract_management/content/contract.py:60
+#: collective/contract_management/views/contract_view.pt:25
 msgid "Reminder"
 msgstr ""
 
-#: collective/contract_management/content/contract.py:57
+#: collective/contract_management/content/contract.py:61
 msgid "Reminder, in days before Notice period."
 msgstr ""
 
-#: collective/contract_management/content/contract.py:66
-#: collective/contract_management/views/contract_view.pt:22
+#: collective/contract_management/content/contract.py:68
+#: collective/contract_management/views/contract_view.pt:30
 msgid "Renewal period"
 msgstr ""
 
@@ -133,7 +146,11 @@ msgstr ""
 msgid "Renewal time in month for the automatic renewal of the contract."
 msgstr ""
 
-#: collective/contract_management/configure.zcml:36
+#: collective/contract_management/content/contract.py:79
+msgid "The amount of the whole contract."
+msgstr ""
+
+#: collective/contract_management/configure.zcml:37
 msgid "Uninstalls the collective.contract_management add-on."
 msgstr ""
 
@@ -142,18 +159,28 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#: collective/contract_management/views/contract_view.pt:35
+#: collective/contract_management/views/contract_view.pt:40
 msgid "attachments"
 msgstr ""
 
-#: collective/contract_management/views/contract_view.pt:29
+#: collective/contract_management/views/contract_view.pt:28
 msgid "beforehand"
 msgstr ""
 
-#: collective/contract_management/configure.zcml:27
+#: collective/contract_management/configure.zcml:28
 msgid "collective.contract_management"
 msgstr ""
 
-#: collective/contract_management/configure.zcml:36
+#: collective/contract_management/configure.zcml:37
 msgid "collective.contract_management (uninstall)"
+msgstr ""
+
+#. Default: "End date must be after start date."
+#: collective/contract_management/content/contract.py:87
+msgid "error_end_must_be_after_start_date"
+msgstr ""
+
+#. Default: "Invalid start or end date"
+#: collective/contract_management/content/contract.py:27
+msgid "error_invalid_date"
 msgstr ""

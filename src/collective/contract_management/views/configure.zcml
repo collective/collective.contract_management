@@ -14,11 +14,19 @@
     />
 
   <browser:page
+    name="contracts_ics_view"
+    for="plone.app.contenttypes.interfaces.ICollection"
+    class=".ics_view.IcsView"
+    permission="zope2.View"
+    />
+
+  <browser:page
     name="view"
     for="collective.contract_management.content.contract.IContract"
     class=".contract_view.ContractView"
     template="contract_view.pt"
     permission="zope2.View"
     />
+
 
 </configure>
