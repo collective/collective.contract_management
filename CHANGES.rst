@@ -5,13 +5,14 @@ Changelog
 2.0b2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add uid and url fields to ICS export.
+  [MrTango]
 
 
 2.0b1 (2020-01-20)
 ------------------
 
-- Add contracts_ics_view, calendar_from_collection adapter, locales and optimze styling on contract_view
+- Add contracts_ics_view, calendar_from_collection adapter, locales and optimize styling on contract_view
 
 
 1.0b5 (2020-01-14)

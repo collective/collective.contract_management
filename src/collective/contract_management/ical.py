@@ -7,7 +7,9 @@ from plone.app.contentlisting.interfaces import IContentListingObject
 from plone.app.event.base import default_timezone
 from plone.event.interfaces import IEvent, IICalendarEventComponent
 from plone.event.utils import utc
+from Products.CMFPlone.utils import safe_unicode
 from Products.ZCatalog.interfaces import ICatalogBrain
+from zope.globalrequest import getRequest
 from zope.interface import implementer, Interface
 
 import icalendar
@@ -127,6 +129,18 @@ class ICalendarContractEventComponent(object):
         if ret:
             return {"value": ret}
 
+    @property
+    def url(self):
+        return {"value": safe_unicode(self.context.absolute_url())}
+
+    @property
+    def uid(self):
+        request = getRequest() or {}
+        domain = request.get("HTTP_HOST", None)
+        domain = "@" + domain if domain else ""
+        sync_uid = self.context.UID() + domain if self.context.UID() else None
+        return {"value": sync_uid}
+
     def ical_add(self, prop, val):
         if not val:
             return
@@ -148,6 +162,8 @@ class ICalendarContractEventComponent(object):
         ical_add = self.ical_add
         ical_add("dtstamp", self.dtstamp)
         ical_add("created", self.created)
+        ical_add("uid", self.uid)
+        ical_add("url", self.url)
         ical_add("last-modified", self.last_modified)
         ical_add("summary", self.summary)
         ical_add("description", self.description)
