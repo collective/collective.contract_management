@@ -8,6 +8,9 @@ Changelog
 - Add uid and url fields to ICS export.
   [MrTango]
 
+- Add summery_prefix to exported event summeries, based on most upper parent Contracts obj.
+  [MrTango]
+
 
 2.0b1 (2020-01-20)
 ------------------

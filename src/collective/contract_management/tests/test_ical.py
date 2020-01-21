@@ -18,7 +18,7 @@ class ContractIcalIntegrationTest(unittest.TestCase):
         self.portal = self.layer["portal"]
         setRoles(self.portal, TEST_USER_ID, ["Manager"])
         self.contracts = api.content.create(
-            container=self.portal, type="Contracts", id="contracts"
+            container=self.portal, type="Contracts", id="contracts", title="Contracts management"
         )
         self.contract1 = api.content.create(
             container=self.contracts,
@@ -65,21 +65,21 @@ class ContractIcalIntegrationTest(unittest.TestCase):
 
         cal = IICalendar(self.contract1)
         result = cal.to_ical()
-        self.assertIn("SUMMARY:Test Contract Ä", result)
-        self.assertNotIn("SUMMARY:Test Contract B", result)
-        self.assertIn("DTSTART;VALUE=DATE:20200615", result)
-        self.assertIn("DTEND;VALUE=DATE:20200616", result)
-        self.assertIn("TRIGGER:-P29D", result)
+        self.assertIn("SUMMARY:[Contracts management]: Test Contract Ä", result.decode())
+        self.assertNotIn("SUMMARY:[Contracts management]: Test Contract B", result.decode())
+        self.assertIn("DTSTART;VALUE=DATE:20200615", result.decode())
+        self.assertIn("DTEND;VALUE=DATE:20200616", result.decode())
+        self.assertIn("TRIGGER:-P29D", result.decode())
 
     def test_calendar_from_collection(self):
         from collective.contract_management.ical import IICalendar
 
         cal = IICalendar(self.contract_collection)
         result = cal.to_ical()
-        self.assertIn("SUMMARY:Test Contract Ä", result)
-        self.assertIn("SUMMARY:Test Contract B", result)
-        self.assertIn("DTSTART;VALUE=DATE:20200615", result)
-        self.assertIn("DTSTART;VALUE=DATE:20200830", result)
-        self.assertIn("DTEND;VALUE=DATE:20200616", result)
-        self.assertIn("TRIGGER:-P29D", result)
-        self.assertIn("TRIGGER:-P61D", result)
+        self.assertIn("SUMMARY:[Contracts management]: Test Contract Ä", result.decode())
+        self.assertIn("SUMMARY:[Contracts management]: Test Contract B", result.decode())
+        self.assertIn("DTSTART;VALUE=DATE:20200615", result.decode())
+        self.assertIn("DTSTART;VALUE=DATE:20200830", result.decode())
+        self.assertIn("DTEND;VALUE=DATE:20200616", result.decode())
+        self.assertIn("TRIGGER:-P29D", result.decode())
+        self.assertIn("TRIGGER:-P61D", result.decode())

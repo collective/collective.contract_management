@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from Acquisition import aq_inner
+from Acquisition import aq_inner, aq_parent
 from collective.contract_management.content.contract import IContract
+from collective.contract_management.content.contracts import IContracts
 from datetime import datetime, timedelta
 from plone.app.contentlisting.interfaces import IContentListingObject
 from plone.app.event.base import default_timezone
@@ -76,7 +77,7 @@ def calendar_from_collection(context):
     context = aq_inner(context)
     # The keyword argument brains=False was added to plone.app.contenttypes
     # after 1.0
-    result = context.results(batch=False, sort_on='start')
+    result = context.results(batch=False, sort_on="start")
     return construct_icalendar(context, result)
 
 
@@ -89,6 +90,15 @@ class ICalendarContractEventComponent(object):
         self.context = context
         self.event = self.context
         self.ical = icalendar.Event()
+
+    def get_summery_prefix(self):
+        """ get summery prefix from most upper parent Contracts obj
+        """
+        parent = aq_parent(self.context)
+        while IContracts.providedBy(parent):
+            context = parent
+            parent = aq_parent(parent)
+        return context.title
 
     @property
     def dtstamp(self):
@@ -107,7 +117,8 @@ class ICalendarContractEventComponent(object):
 
     @property
     def summary(self):
-        return {"value": self.event.title}
+        prefix = self.get_summery_prefix()
+        return {"value": u"[{0}]: {1}".format(prefix, self.event.title)}
 
     @property
     def description(self):
