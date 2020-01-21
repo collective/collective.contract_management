@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0b2 (unreleased)
+2.0b2 (2020-01-21)
 ------------------
 
 - Add uid and url fields to ICS export.
