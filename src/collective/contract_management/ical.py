@@ -41,8 +41,8 @@ def construct_icalendar(context, events):
     for event in events:
         if ICatalogBrain.providedBy(event) or IContentListingObject.providedBy(event):
             event = event.getObject()
-        if not (IContract.providedBy(event) or IEvent.providedBy(event)):
-            # Must be an event.
+        if not (IContract.providedBy(event)):
+            # Must be a contract.
             continue
         ical_event = IICalendarEventComponent(event).to_ical()
         ical_alarm = icalendar.Alarm()

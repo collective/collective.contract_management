@@ -5,7 +5,8 @@ Changelog
 2.0b3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- only process IContract objects not IEvent objects
+  [MrTango]
 
 
 2.0b2 (2020-01-21)
