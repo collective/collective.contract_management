@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0b3 (unreleased)
+2.0b3 (2020-01-27)
 ------------------
 
 - only process IContract objects not IEvent objects
