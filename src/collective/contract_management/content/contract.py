@@ -79,7 +79,7 @@ class IContract(model.Schema):
             )
 
 
-@implementer(IContract, IEvent)
+@implementer(IContract)
 class Contract(Container):
     """
     """

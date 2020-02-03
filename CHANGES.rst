@@ -5,7 +5,8 @@ Changelog
 2.0b4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Don't implement IEvent, because it breaks the event portlet.
+  [MrTango]
 
 
 2.0b3 (2020-01-27)
