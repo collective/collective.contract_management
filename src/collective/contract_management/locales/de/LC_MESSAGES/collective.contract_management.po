@@ -18,47 +18,51 @@ msgstr ""
 "Domain: collective.contract_management\n"
 "Language: de\n"
 
-#: collective/contract_management/vocabularies/renewal_periods.py:30
+#: collective/contract_management/vocabularies/renewal_periods.py:29
 msgid "12 months"
 msgstr "12 Monate"
 
-#: collective/contract_management/vocabularies/reminder_types.py:32
+#: collective/contract_management/vocabularies/reminder_types.py:31
 msgid "120 days"
 msgstr "120 Tage"
 
-#: collective/contract_management/tests/test_vocab_reminder_types.py:31
-#: collective/contract_management/vocabularies/reminder_types.py:28
+#: collective/contract_management/tests/test_vocab_reminder_types.py:29
+#: collective/contract_management/vocabularies/reminder_types.py:27
 msgid "14 days"
 msgstr "14 Tage"
 
-#: collective/contract_management/vocabularies/renewal_periods.py:31
+#: collective/contract_management/vocabularies/renewal_periods.py:30
 msgid "24 months"
 msgstr "24 Monate"
 
-#: collective/contract_management/tests/test_vocab_renewal_periods.py:31
-#: collective/contract_management/vocabularies/renewal_periods.py:28
+#: collective/contract_management/tests/test_vocab_renewal_periods.py:29
+#: collective/contract_management/vocabularies/renewal_periods.py:27
 msgid "3 months"
 msgstr "3 Monate"
 
-#: collective/contract_management/vocabularies/reminder_types.py:29
+#: collective/contract_management/vocabularies/reminder_types.py:28
 msgid "30 days"
 msgstr "30 Tage"
 
-#: collective/contract_management/vocabularies/renewal_periods.py:32
+#: collective/contract_management/vocabularies/renewal_periods.py:31
 msgid "36 months"
 msgstr "36 Monate"
 
-#: collective/contract_management/vocabularies/renewal_periods.py:29
+#: collective/contract_management/vocabularies/renewal_periods.py:28
 msgid "6 months"
 msgstr "6 Monate"
 
-#: collective/contract_management/vocabularies/reminder_types.py:30
+#: collective/contract_management/vocabularies/reminder_types.py:29
 msgid "60 days"
 msgstr "60 Tage"
 
-#: collective/contract_management/vocabularies/reminder_types.py:31
+#: collective/contract_management/vocabularies/reminder_types.py:30
 msgid "90 days"
 msgstr "Tage"
+
+#: collective/contract_management/views/contracts_view.py:16
+msgid "A small message"
+msgstr ""
 
 #: collective/contract_management/profiles/default/types/Contracts.xml
 msgid "Container for contracts"
@@ -72,18 +76,20 @@ msgstr "Vertrag"
 msgid "Contract CT to hold contract meta data and files."
 msgstr "Vertrag, enthält Vertragsdaten und Unterlagen"
 
-#: collective/contract_management/content/contract.py:78
-#: collective/contract_management/views/contract_view.pt:32
+#: collective/contract_management/content/contract.py:66
+#: collective/contract_management/views/contract_view.pt:46
 msgid "Contract amount"
 msgstr "Vertragsvolumen"
 
-#: collective/contract_management/content/contract.py:36
-#: collective/contract_management/views/contract_view.pt:19
+#: collective/contract_management/content/contract.py:24
+#: collective/contract_management/views/contract_view.pt:33
+#: collective/contract_management/views/contracts_view.pt:21
 msgid "Contract begin"
 msgstr "Vertragsbeginn"
 
-#: collective/contract_management/content/contract.py:44
-#: collective/contract_management/views/contract_view.pt:21
+#: collective/contract_management/content/contract.py:32
+#: collective/contract_management/views/contract_view.pt:35
+#: collective/contract_management/views/contracts_view.pt:22
 msgid "Contract end"
 msgstr "Vertragsende"
 
@@ -114,45 +120,46 @@ msgstr "Datum"
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: collective/contract_management/behaviors/contract_event_basic.py:25
-msgid "Give in a project name"
-msgstr ""
-
 #: collective/contract_management/configure.zcml:28
 msgid "Installs the collective.contract_management add-on."
 msgstr "Installiert die collective.contract_management Erweiterung."
 
-#: collective/contract_management/content/contract.py:52
+#: collective/contract_management/content/contract.py:40
 #: collective/contract_management/profiles/default/registry.xml
 #: collective/contract_management/upgrades/1001/registry.xml
 msgid "Notice period"
 msgstr "Kündigungsfrist"
 
-#: collective/contract_management/behaviors/contract_event_basic.py:24
-msgid "Project"
-msgstr ""
-
-#: collective/contract_management/content/contract.py:60
-#: collective/contract_management/views/contract_view.pt:25
+#: collective/contract_management/content/contract.py:48
+#: collective/contract_management/views/contract_view.pt:39
 msgid "Reminder"
 msgstr "Erinnerung"
 
-#: collective/contract_management/content/contract.py:61
+#: collective/contract_management/content/contract.py:49
 msgid "Reminder, in days before Notice period."
 msgstr "Erinnerung, in Tagen vor der Kündigungsfrist."
 
-#: collective/contract_management/content/contract.py:68
-#: collective/contract_management/views/contract_view.pt:30
+#: collective/contract_management/content/contract.py:56
+#: collective/contract_management/views/contract_view.pt:44
+#: collective/contract_management/views/contracts_view.pt:24
 msgid "Renewal period"
 msgstr "Verlängerungszeitraum"
 
-#: collective/contract_management/content/contract.py:69
+#: collective/contract_management/content/contract.py:57
 msgid "Renewal time in month for the automatic renewal of the contract."
 msgstr "Zeit in Monaten, um die ein Vertrag erlängert wird."
 
-#: collective/contract_management/content/contract.py:79
+#: collective/contract_management/views/contracts_view.pt:25
+msgid "Tags"
+msgstr "Tags"
+
+#: collective/contract_management/content/contract.py:67
 msgid "The amount of the whole contract."
 msgstr "Vertragsvolumen über die gesamte Laufzeit."
+
+#: collective/contract_management/views/contracts_view.pt:20
+msgid "Title"
+msgstr "Titel"
 
 #: collective/contract_management/configure.zcml:37
 msgid "Uninstalls the collective.contract_management add-on."
@@ -163,11 +170,11 @@ msgstr "Deinstalliert die collective.contract_management Erweiterung."
 msgid "View"
 msgstr "Ansicht"
 
-#: collective/contract_management/views/contract_view.pt:40
+#: collective/contract_management/views/contract_view.pt:54
 msgid "attachments"
 msgstr "Anhänge"
 
-#: collective/contract_management/views/contract_view.pt:28
+#: collective/contract_management/views/contract_view.pt:42
 msgid "beforehand"
 msgstr "zuvor"
 
@@ -180,11 +187,15 @@ msgid "collective.contract_management (uninstall)"
 msgstr ""
 
 #. Default: "End date must be after start date."
-#: collective/contract_management/content/contract.py:87
+#: collective/contract_management/content/contract.py:75
 msgid "error_end_must_be_after_start_date"
 msgstr "Das Enddatum muss nach dem Startdatum liegen!"
 
 #. Default: "Invalid start or end date"
-#: collective/contract_management/content/contract.py:27
+#: collective/contract_management/content/contract.py:14
 msgid "error_invalid_date"
 msgstr "Fehlerhafter Datum"
+
+#: collective/contract_management/views/contracts_view.pt:37
+msgid "months"
+msgstr "Monate"

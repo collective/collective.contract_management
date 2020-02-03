@@ -1,13 +1,48 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:metal="http://xml.zope.org/namespaces/metal"
-      xmlns:tal="http://xml.zope.org/namespaces/tal"
-      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      i18n:domain="collective.contract_management"
-      metal:use-macro="context/main_template/macros/master">
-<body>
-  <metal:block fill-slot="content-core">
-      <h2 i18n:translate="">Sample View</h2>
-      <p tal:content="view/msg">this gets replaced</p>
-  </metal:block>
-</body>
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  i18n:domain="collective.contract_management"
+  metal:use-macro="context/main_template/macros/master">
+
+
+    <metal:style_slot fill-slot="style_slot">
+      <link rel="stylesheet"
+        type="text/css"
+        href="++plone++collective.contract_management/main.min.css" />
+    </metal:style_slot>
+
+    <!-- <metal:block fill-slot="column_two_slot" /> -->
+
+  <body>
+    <metal:block fill-slot="content-core">
+
+      <table class="contracts_listing">
+        <thead>
+          <tr>
+            <th i18n:translate="">Title</th>
+            <th i18n:translate="">Contract begin</th>
+            <th i18n:translate="">Contract end</th>
+            <th i18n:translate="">Notice period</th>
+            <th i18n:translate="">Renewal period</th>
+            <th i18n:translate="">Tags</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr tal:repeat="item python:context.restrictedTraverse('@@contentlisting')(portal_type='Contract')">
+            <td>
+              <a tal:content="item/Title"
+                tal:attributes="href item/getURL">title</a>
+            </td>
+            <td tal:content="python: here.toLocalizedTime(item.start, False, time_only=None)"></td>
+            <td tal:content="python: here.toLocalizedTime(item.end, False, time_only=None)"></td>
+            <td tal:content="python: here.toLocalizedTime(item.notice_period, False, time_only=None)"></td>
+            <td> <span tal:content="item/renewal_period" /> <span i18n:translate="">months</span></td>
+            <td tal:content="python: ', '.join(sorted(item.Subject()))"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </metal:block>
+  </body>
 </html>
