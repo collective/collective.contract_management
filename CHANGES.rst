@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0b4 (unreleased)
+2.0b4 (2020-02-03)
 ------------------
 
 - Don't implement IEvent, because it breaks the event portlet.
