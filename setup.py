@@ -53,6 +53,7 @@ setup(
         'plone.api>=1.8.4',
         'plone.restapi',
         'plone.app.dexterity',
+        'WeasyPrint',
     ],
     extras_require={
         'collectionfilter': [

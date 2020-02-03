@@ -7,8 +7,9 @@
   -*- extra stuff goes here -*-
 
   <browser:page
-    name="ContractsPdfView"
-    for="Products.CMFCore.interfaces.IFolderish"
+    name="contracts-as-pdf"
+    for="plone.app.contenttypes.interfaces.ICollection"
+    class=".contracts_as_pdf.ContractsAsPdfView"
     template="contracts_as_pdf.pt"
     permission="zope2.View"
     />

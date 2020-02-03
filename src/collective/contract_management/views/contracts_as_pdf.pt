@@ -1,12 +1,74 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:metal="http://xml.zope.org/namespaces/metal"
-      xmlns:tal="http://xml.zope.org/namespaces/tal"
-      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      i18n:domain="collective.contract_management"
-      metal:use-macro="context/main_template/macros/master">
-<body>
-  <metal:block fill-slot="content-core">
-      <h2 i18n:translate="">Sample View</h2>
-  </metal:block>
-</body>
-</html>
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  i18n:domain="collective.contract_management">
+  <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      @page {
+        margin:1cm 0.5cm 2.75cm 1cm;
+      }
+      body {
+        height: 100%;
+        display: block;
+        font-size:14px;
+        color:#444444;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: "OpenSans-Regular","HelveticaNeue",Helvetica,Arial,sans-serif;
+      }
+      table.contracts_listing{
+        border-collapse: collapse;
+        border: 1px solid LightGray;
+        padding: 0.4em;
+      }
+      table.contracts_listing th{
+        border: 1px solid LightGray;
+        padding: 0.8em;
+
+      }
+      table.contracts_listing td{
+        border: 1px solid LightGray;
+        padding: 0.4em;
+        text-align: center;
+      }
+      table.contracts_listing td:nth-child(1){
+        text-align: left;
+      }
+    </style>
+
+  </head>
+
+    <body>
+
+      <table class="contracts_listing">
+        <thead>
+          <tr>
+            <th i18n:translate="">Title</th>
+            <th i18n:translate="">Contract begin</th>
+            <th i18n:translate="">Contract end</th>
+            <th i18n:translate="">Notice period</th>
+            <th i18n:translate="">Renewal period</th>
+            <th i18n:translate="">Tags</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr tal:repeat="item python:context.restrictedTraverse('@@contentlisting')(portal_type='Contract')">
+            <td>
+              <a tal:content="item/Title"
+                tal:attributes="href item/getURL">title</a>
+            </td>
+            <td tal:content="python: here.toLocalizedTime(item.start, False, time_only=None)"></td>
+            <td tal:content="python: here.toLocalizedTime(item.end, False, time_only=None)"></td>
+            <td tal:content="python: here.toLocalizedTime(item.notice_period, False, time_only=None)"></td>
+            <td>
+              <span tal:content="item/renewal_period" />
+              <span i18n:translate="">months</span>
+            </td>
+            <td tal:content="python: ', '.join(sorted(item.Subject()))"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </body>
+  </html>

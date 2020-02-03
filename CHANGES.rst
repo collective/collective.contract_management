@@ -8,6 +8,9 @@ Changelog
 - Don't implement IEvent, because it breaks the event portlet.
   [MrTango]
 
+- Add PDF-Export view for Contracts and add buttons for PDF and iCal-Export
+  [MrTango]
+
 
 2.0b3 (2020-01-27)
 ------------------
