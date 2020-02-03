@@ -7,6 +7,14 @@
   -*- extra stuff goes here -*-
 
   <browser:page
+    name="contracts-view"
+    for="Products.CMFCore.interfaces.IFolderish"
+    class=".contracts_view.ContractsView"
+    template="contracts_view.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
     name="ics_view"
     for="collective.contract_management.content.contract.IContract"
     class=".ics_view.IcsView"
