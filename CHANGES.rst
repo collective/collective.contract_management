@@ -5,7 +5,8 @@ Changelog
 2.0b8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix bug in ical export when contract end date was missing
+  [MrTango]
 
 
 2.0b7 (2020-02-04)

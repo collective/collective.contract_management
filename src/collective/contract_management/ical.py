@@ -45,11 +45,13 @@ def construct_icalendar(context, events):
             # Must be a contract.
             continue
         ical_event = IICalendarEventComponent(event).to_ical()
-        ical_alarm = icalendar.Alarm()
-        ical_alarm.add("action", "DISPLAY")
-        alarm_value = (event.end - event.notice_period).days + int(event.reminder)
-        ical_alarm.add("trigger", timedelta(days=-alarm_value))
-        ical_event.add_component(ical_alarm)
+        if event.end and event.notice_period:
+            ical_alarm = icalendar.Alarm()
+            ical_alarm.add("action", "DISPLAY")
+            reminder = int(event.reminder)  # default 30
+            alarm_value = (event.end - event.notice_period).days + reminder
+            ical_alarm.add("trigger", timedelta(days=-alarm_value))
+            ical_event.add_component(ical_alarm)
         cal.add_component(ical_event)
     return cal
 
@@ -126,11 +128,13 @@ class ICalendarContractEventComponent(object):
 
     @property
     def dtstart(self):
-        return {"value": self.event.end.date()}
+        start = self.event.end and {"value": self.event.end.date()} or None
+        return start
 
     @property
     def dtend(self):
-        return {"value": self.event.end.date() + timedelta(days=+1)}
+        end = self.event.end and {"value": self.event.end.date() + timedelta(days=+1)} or None
+        return end
 
     @property
     def categories(self):
