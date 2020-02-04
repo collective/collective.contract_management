@@ -5,7 +5,8 @@ Changelog
 2.0b7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix pdf landscape mode
+  [MrTango]
 
 
 2.0b6 (2020-02-04)
