@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0b7 (unreleased)
+2.0b7 (2020-02-04)
 ------------------
 
 - Fix pdf landscape mode
