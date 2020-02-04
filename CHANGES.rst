@@ -5,7 +5,8 @@ Changelog
 2.0b6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Use landscape for pdf export
+  [MrTango]
 
 
 2.0b5 (2020-02-04)
