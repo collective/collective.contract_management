@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0b5 (unreleased)
+2.0b5 (2020-02-04)
 ------------------
 
 - Optimize layout of Contracts view table
