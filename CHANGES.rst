@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0b6 (unreleased)
+2.0b6 (2020-02-04)
 ------------------
 
 - Use landscape for pdf export
