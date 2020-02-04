@@ -33,7 +33,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr tal:repeat="item python:context.restrictedTraverse('@@contentlisting')(portal_type='Contract')">
+          <tr tal:repeat="item python:context.restrictedTraverse('@@contentlisting')(portal_type='Contract')"
+            tal:attributes="class python: repeat.item.even and 'odd' or 'even'"
+          >
             <td>
               <a tal:content="item/Title" tal:attributes="href item/getURL">title</a>
             </td>

@@ -5,8 +5,8 @@ Changelog
 2.0b5 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Optimize layout of Contracts view table
+  [MrTango]
 
 2.0b4 (2020-02-03)
 ------------------
