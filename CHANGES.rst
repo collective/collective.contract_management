@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0b8 (unreleased)
+2.0b8 (2020-02-04)
 ------------------
 
 - Fix bug in ical export when contract end date was missing
