@@ -3,8 +3,6 @@
 from collective.contract_management import _
 from Products.Five.browser import BrowserView
 
-# from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-
 
 class ContractsView(BrowserView):
     # If you want to define a template here, please remove the template from

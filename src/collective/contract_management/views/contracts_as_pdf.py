@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime
-from Products.Five.browser import BrowserView
 from Products.CMFPlone.utils import safe_unicode
+from Products.Five.browser import BrowserView
 
 import weasyprint
-
-
-# from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 
 class ContractsAsPdfView(BrowserView):

@@ -6,7 +6,7 @@ from collective.contract_management.content.contracts import IContracts
 from datetime import datetime, timedelta
 from plone.app.contentlisting.interfaces import IContentListingObject
 from plone.app.event.base import default_timezone
-from plone.event.interfaces import IEvent, IICalendarEventComponent
+from plone.event.interfaces import IICalendarEventComponent
 from plone.event.utils import utc
 from Products.CMFPlone.utils import safe_unicode
 from Products.ZCatalog.interfaces import ICatalogBrain

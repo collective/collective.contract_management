@@ -4,7 +4,6 @@ from collective.contract_management import _
 from plone.app.z3cform.widget import DatetimeWidget
 from plone.autoform import directives
 from plone.dexterity.content import Container
-from plone.event.interfaces import IEvent
 from plone.supermodel import model
 from zope import schema
 from zope.interface import implementer, Invalid, invariant
