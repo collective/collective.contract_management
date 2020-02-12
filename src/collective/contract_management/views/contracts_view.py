@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from collective.contract_management import _
 from Products.Five.browser import BrowserView
 
 
@@ -10,6 +9,8 @@ class ContractsView(BrowserView):
     # template = ViewPageTemplateFile('contracts_view.pt')
 
     def __call__(self):
-        # Implement your own actions:
-        self.msg = _(u'A small message')
+        contentFilter = dict(self.request.get('contentFilter', {}))
+        self.items = self.context.restrictedTraverse("@@contentlisting")(
+            portal_type="Contract", **contentFilter
+        )
         return self.index()

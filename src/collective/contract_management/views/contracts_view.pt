@@ -33,7 +33,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr tal:repeat="item python:context.restrictedTraverse('@@contentlisting')(portal_type='Contract')"
+          <tr tal:repeat="item view/items"
             tal:attributes="class python: repeat.item.even and 'odd' or 'even'"
           >
             <td>
