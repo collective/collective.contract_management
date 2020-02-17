@@ -5,7 +5,8 @@ Changelog
 2.0b9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Allow collectionfilter to work with contentlisting view
+  [MrTango]
 
 
 2.0b8 (2020-02-04)
