@@ -34,11 +34,26 @@ Features
 --------
 
 - Overview of all contracts or contracts which are due to verify, based on Collections
-- ical export of a notice period event, including a defined reminder via @@ics_view
-- ical export of multible contract notice periods via collection and @@contracts_ics_view
+- iCal export of a notice period event, including a defined reminder via @@ics_view
+- iCal export of multiple contract notice periods via collection and @@contracts_ics_view
 - works well in combination with `collective.collectionfilter <https://pypi.org/project/collective.collectionfilter/>`_
 
-Exported events are set as full day events for the contract end date, including an alarm. The event summery is prefixed with the title of the most upper parent Contracts obj.
+Exported events are set as full day events for the contract end date, including an alarm based on notice_period and reminder value. The event summery is prefixed with the title of the most upper parent Contracts obj.
+
+.. figure:: docs/contract_edit_form.png
+
+   Contract edit form
+
+
+.. figure:: docs/contracts_listing_collection.png
+
+   Contracts listing based on a Collection with a contracts_view
+
+
+.. figure:: docs/contracts_collectionfilter.png
+
+   Filtering contracts with collective.collectionfilter
+
 
 Translations
 ------------
